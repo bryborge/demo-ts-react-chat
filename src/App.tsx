@@ -1,6 +1,12 @@
+// dependencies
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
+// layouts
 import TwoColumnLayout from './layouts/TwoColumnLayout';
+// features
+import ChatRoom from './features/ChatRoom';
+import UserList from './features/UserList';
+// global styles
 import './App.css';
 
 function App() {
@@ -8,8 +14,8 @@ function App() {
     <React.Fragment>
       <CssBaseline />
       <TwoColumnLayout
-        leftColumn={<h2>Rooms</h2>}
-        rightColumn={<h2>Chat</h2>}
+        leftColumn={ <UserList />}
+        rightColumn={ <ChatRoom /> }
       />
     </React.Fragment>
   );
