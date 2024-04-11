@@ -1,6 +1,5 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 
 interface TwoColumnLayoutProps {
   leftColumn: React.ReactNode;
@@ -10,15 +9,15 @@ interface TwoColumnLayoutProps {
 const TwoColumnLayout: React.FC<TwoColumnLayoutProps> = ({ leftColumn, rightColumn }) => {
   return (
     <Grid container spacing={2}>
-      <Grid item xs={6}>
-        <Paper elevation={3} style={{ padding: 20 }}>
+      <Grid item xs={12} sm={4} order={{ xs: 2, sm: 1 }}>
+        <div style={{ padding: 20 }}>
         { leftColumn }
-        </Paper>
+        </div>
       </Grid>
-      <Grid item xs={6}>
-        <Paper elevation={3} style={{ padding: 20 }}>
+      <Grid item xs={12} sm={8} order={{ xs: 1, sm: 2 }}>
+        <div style={{ padding: 20 }}>
         { rightColumn }
-        </Paper>
+        </div>
       </Grid>
     </Grid>
   );
