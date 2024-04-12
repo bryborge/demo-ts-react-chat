@@ -1,6 +1,5 @@
 import React from 'react';
-import List from '@mui/material/List';
-import ListSubheader from '@mui/material/ListSubheader';
+import { List, ListSubheader } from '@mui/material';
 import UserListItem from '../UserListItem';
 
 interface Users {

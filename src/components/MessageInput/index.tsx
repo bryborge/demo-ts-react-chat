@@ -1,8 +1,6 @@
 import React from 'react';
 import SendIcon from '@mui/icons-material/Send';
-import Button from '@mui/material/Button';
-import InputAdornment from '@mui/material/InputAdornment';
-import TextField from '@mui/material/TextField';
+import { Button, InputAdornment, TextField } from '@mui/material';
 
 const MessageInput: React.FC = () => {
   return (

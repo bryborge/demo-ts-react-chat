@@ -30,7 +30,7 @@ const chatMessages: ChatMessage[] = [
   },
 ]
 
-const ChatRoom: React.FC = () => {
+const Messages: React.FC = () => {
   return (
     <>
       <h2>Chat Room</h2>
@@ -49,4 +49,4 @@ const ChatRoom: React.FC = () => {
   );
 }
 
-export default ChatRoom;
+export default Messages;

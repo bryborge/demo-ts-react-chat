@@ -1,20 +1,32 @@
-import * as React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
-import TwoColumnLayout from './layouts/TwoColumnLayout';
-import ChatRoom from './components/ChatRoom';
+import React, { useState } from 'react';
+import { CssBaseline } from '@mui/material';
 import NavBar from './components/Navbar';
-import UserList from './components/UserList';
 import './App.css';
+import ChatPage from './pages/ChatPage';
+import JoinPage from './pages/JoinPage';
 
-function App() {
+
+const App: React.FC = () => {
+  const [isJoined, setIsJoined] = useState<boolean | null>(null);
+
+  const handleJoin = () => {
+    // TODO: Implement real join logic
+    setIsJoined(true);
+  }
+
+  function renderChatPage() {
+    return (<ChatPage />);
+  }
+  
+  function renderJoinPage() {
+    return (<JoinPage handleJoin={ handleJoin } />);
+  }
+  
   return (
     <React.Fragment>
       <CssBaseline />
       <NavBar />
-      <TwoColumnLayout
-        leftColumn={ <UserList />}
-        rightColumn={ <ChatRoom /> }
-      />
+      { isJoined ? renderChatPage() : renderJoinPage() }
     </React.Fragment>
   );
 }

@@ -1,7 +1,5 @@
 import React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Typography from '@mui/material/Typography';
-import { Toolbar } from '@mui/material';
+import { AppBar, Toolbar, Typography } from '@mui/material';
 
 const NavBar: React.FC = () => {
   return (

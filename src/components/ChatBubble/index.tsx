@@ -1,6 +1,5 @@
 import React from 'react';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/system/Box';
+import { Box, Typography } from '@mui/material';
 
 interface ChatBubbleProps {
   senderName: string;

@@ -1,9 +1,5 @@
 import React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Divider from '@mui/material/Divider';
-import ListItem from '@mui/material/ListItem';
-import ListItemAvatar from '@mui/material/ListItemAvatar';
-import ListItemText from '@mui/material/ListItemText';
+import { Avatar, Divider, ListItem, ListItemAvatar, ListItemText } from '@mui/material'
 
 interface UserItemProps {
   name: string;
