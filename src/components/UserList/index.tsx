@@ -1,32 +1,23 @@
 import React from 'react';
+// import React, { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { fetchUsers } from '../../redux/usersSlice';
 import { List, ListSubheader } from '@mui/material';
 import UserListItem from '../UserListItem';
-
-interface Users {
-  id: number;
-  fullName: string;
-}
-
-const users: Users[] = [
-  {
-    id: 1,
-    fullName: "Joaquin Adams (Me)"
-  },
-  {
-    id: 2,
-    fullName: "Lamar Espinoza"
-  },
-  {
-    id: 3,
-    fullName: "Phoebe Nguyen"
-  },
-  {
-    id: 4,
-    fullName: "Sherri Joyce"
-  },
-]
+import { RootState } from '../../redux/store';
 
 const UserList: React.FC = () => {
+  // const dispatch = useDispatch();
+  const users = useSelector((state: RootState) => state.users.users);
+  // const status = useSelector((state: RootState) => state.users.status);
+console.log(users)
+  // useEffect(() => {
+  //   if (status === 'idle') {
+  //     dispatch(fetchUsers());
+  //   }
+  // }, [status, dispatch]);
+
   return (
     <>
       <h2>Users</h2>
@@ -38,9 +29,9 @@ const UserList: React.FC = () => {
           </ListSubheader>
         }
       >
-        {users.map((user) => (
-          <UserListItem name={ user.fullName } />
-        ))}
+        { users.map((user) => (
+          <UserListItem name={ user.fullName } key={user.id} />
+        )) }
       </List>
     </>
   );

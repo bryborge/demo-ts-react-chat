@@ -5,12 +5,14 @@ import './App.css';
 import ChatPage from './pages/ChatPage';
 import JoinPage from './pages/JoinPage';
 
-
 const App: React.FC = () => {
   const [isJoined, setIsJoined] = useState<boolean | null>(null);
 
   const handleJoin = () => {
-    // TODO: Implement real join logic
+    // get all users in a chat
+
+      //  if none, create a new chat
+    // set joined
     setIsJoined(true);
   }
 
